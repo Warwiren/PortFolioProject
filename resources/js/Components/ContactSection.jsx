@@ -48,11 +48,6 @@ export default function ContactSection() {
                     <h2 className="font-display text-2xl text-amber-100 sm:text-3xl">
                         Discutons de notre prochaine quête
                     </h2>
-                    {/* <p className="max-w-lg text-sm text-zinc-300">
-                        Que ce soit pour renforcer une équipe systèmes & réseaux cloud,
-                        concevoir une nouvelle architecture ou façonner une interface web
-                        immersive, je suis prêt à entrer dans la partie.
-                    </p> */}
 
                     <div className="mt-4 space-y-3 text-sm text-zinc-200">
                         <p className="flex items-center gap-3">
@@ -75,7 +70,7 @@ export default function ContactSection() {
                     </div>
                 </div>
 
-                <div className="rounded-3xl border border-amber-500/30 bg-gradient-to-b from-zinc-950/90 to-black p-6 shadow-[0_0_50px_rgba(0,0,0,0.9)]">
+                {/* <div className="rounded-3xl border border-amber-500/30 bg-gradient-to-b from-zinc-950/90 to-black p-6 shadow-[0_0_50px_rgba(0,0,0,0.9)]">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300/90">
                         Sort de communication
                     </p>
@@ -151,7 +146,7 @@ export default function ContactSection() {
                             Lancer le sort
                         </button>
                     </form>
-                </div>
+                </div> */}
             </motion.div>
         </section>
     );

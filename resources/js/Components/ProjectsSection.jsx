@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
-import { Sparkles, ScrollText } from 'lucide-react';
-import ProjectCubeScene from '@/Components/canvas/ProjectCubeScene';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { Sparkles, ScrollText } from "lucide-react";
+import ProjectCubeScene from "@/Components/canvas/ProjectCubeScene";
 
 const sectionVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: "easeOut" },
     },
 };
 
@@ -38,8 +38,9 @@ export default function ProjectsSection({ projects }) {
                         Le cube des quêtes accomplies
                     </h2>
                     <p className="max-w-md text-sm text-zinc-300">
-                        Cet artéfact contiendra tout mes projets accomplies. 
-                        N'hésite pas à cliquer sur une face pour découvrir plus de détails.
+                        Cet artéfact contiendra tout mes projets accomplies.
+                        N'hésite pas à cliquer sur une face pour découvrir plus
+                        de détails.
                     </p>
 
                     <ul className="grid gap-3 text-xs text-zinc-300 sm:text-sm">
@@ -48,7 +49,9 @@ export default function ProjectsSection({ projects }) {
                                 key={project.id}
                                 className="rounded-2xl border border-zinc-700/70 bg-zinc-900/50 px-4 py-3"
                             >
-                                <p className="font-medium text-amber-100">{project.title}</p>
+                                <p className="font-medium text-amber-100">
+                                    {project.title}
+                                </p>
                                 <p className="mt-1 text-xs text-zinc-300">
                                     {project.description}
                                 </p>
@@ -98,7 +101,9 @@ export default function ProjectsSection({ projects }) {
                                         <div className="mt-3 flex items-center gap-3">
                                             <button
                                                 type="button"
-                                                onClick={() => setIsImageOpen(true)}
+                                                onClick={() =>
+                                                    setIsImageOpen(true)
+                                                }
                                                 className="group relative inline-flex h-20 w-32 overflow-hidden rounded-xl border border-amber-500/50 bg-zinc-900/70 shadow-[0_0_20px_rgba(0,0,0,0.7)]"
                                             >
                                                 <img
@@ -117,7 +122,10 @@ export default function ProjectsSection({ projects }) {
                                         className="relative max-w-none text-sm leading-relaxed text-zinc-200"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        transition={{ delay: 0.15, duration: 0.5 }}
+                                        transition={{
+                                            delay: 0.15,
+                                            duration: 0.5,
+                                        }}
                                     >
                                         {selectedProject.description}
                                         <span className="pointer-events-none absolute -left-6 top-0 text-2xl text-amber-400/70">
@@ -129,13 +137,22 @@ export default function ProjectsSection({ projects }) {
                                         className="relative mt-4 overflow-hidden rounded-2xl border border-amber-500/40 bg-zinc-900/80 p-4"
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.25, duration: 0.5 }}
+                                        transition={{
+                                            delay: 0.25,
+                                            duration: 0.5,
+                                        }}
                                     >
                                         <motion.div
                                             className="absolute -left-10 top-2 h-32 w-32 origin-top-left rounded-full border border-amber-500/40 bg-gradient-to-b from-amber-500/20 to-transparent"
-                                            initial={{ rotate: -10, opacity: 0 }}
+                                            initial={{
+                                                rotate: -10,
+                                                opacity: 0,
+                                            }}
                                             animate={{ rotate: -3, opacity: 1 }}
-                                            transition={{ duration: 1.2, ease: 'easeOut' }}
+                                            transition={{
+                                                duration: 1.2,
+                                                ease: "easeOut",
+                                            }}
                                         />
 
                                         <p className="relative z-10 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
@@ -143,14 +160,16 @@ export default function ProjectsSection({ projects }) {
                                         </p>
 
                                         <div className="relative z-10 mt-3 flex flex-wrap gap-2">
-                                            {selectedProject.loots.map((loot) => (
-                                                <span
-                                                    key={loot}
-                                                    className="inline-flex items-center gap-1 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-[11px] font-medium text-amber-100 shadow-[0_0_20px_rgba(234,179,8,0.45)]"
-                                                >
-                                                    ✦ {loot}
-                                                </span>
-                                            ))}
+                                            {selectedProject.loots.map(
+                                                (loot) => (
+                                                    <span
+                                                        key={loot}
+                                                        className="inline-flex items-center gap-1 rounded-full border border-amber-500/60 bg-amber-500/10 px-3 py-1 text-[11px] font-medium text-amber-100 shadow-[0_0_20px_rgba(234,179,8,0.45)]"
+                                                    >
+                                                        ✦ {loot}
+                                                    </span>
+                                                ),
+                                            )}
                                         </div>
                                     </motion.div>
                                 </div>
@@ -158,32 +177,34 @@ export default function ProjectsSection({ projects }) {
                         </div>
                     )}
 
-                    {selectedProject && isImageOpen && selectedProject.image && (
-                        <div
-                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 py-6 backdrop-blur-sm"
-                            onClick={() => setIsImageOpen(false)}
-                        >
+                    {selectedProject &&
+                        isImageOpen &&
+                        selectedProject.image && (
                             <div
-                                className="relative max-h-[95vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-amber-500/60 bg-black/95 shadow-[0_0_80px_rgba(0,0,0,0.95)]"
-                                onClick={(event) => event.stopPropagation()}
+                                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 py-6 backdrop-blur-sm"
+                                onClick={() => setIsImageOpen(false)}
                             >
-                                <button
-                                    type="button"
-                                    onClick={() => setIsImageOpen(false)}
-                                    className="absolute right-4 top-4 rounded-full border border-amber-500/60 bg-black/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-100 hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                                <div
+                                    className="relative max-h-[95vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-amber-500/60 bg-black/95 shadow-[0_0_80px_rgba(0,0,0,0.95)]"
+                                    onClick={(event) => event.stopPropagation()}
                                 >
-                                    Fermer l&apos;image
-                                </button>
-                                <div className="flex h-full w-full items-center justify-center p-4 sm:p-6">
-                                    <img
-                                        src={selectedProject.image}
-                                        alt={`Visuel détaillé de ${selectedProject.title}`}
-                                        className="max-h-[85vh] w-full object-contain"
-                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsImageOpen(false)}
+                                        className="absolute right-4 top-4 rounded-full border border-amber-500/60 bg-black/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-100 hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                                    >
+                                        X
+                                    </button>
+                                    <div className="flex h-full w-full items-center justify-center p-4 sm:p-6">
+                                        <img
+                                            src={selectedProject.image}
+                                            alt={`Visuel détaillé de ${selectedProject.title}`}
+                                            className="max-h-[85vh] w-full object-contain"
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                        )}
                 </div>
             </motion.div>
         </section>
@@ -193,4 +214,3 @@ export default function ProjectsSection({ projects }) {
 ProjectsSection.propTypes = {
     projects: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
-

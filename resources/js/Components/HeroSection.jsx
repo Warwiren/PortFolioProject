@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
-import { Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { Sparkles } from "lucide-react";
 
 const sectionVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: "easeOut" },
     },
 };
 
@@ -34,13 +34,15 @@ export default function HeroSection({ hero }) {
 
                     <div className="space-y-4">
                         <h1 className="font-display text-4xl tracking-tight text-amber-50 sm:text-5xl lg:text-6xl">
-                            L&apos;Aventurier des{' '}
+                            L&apos;Aventurier des{" "}
                             <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-sky-300 bg-clip-text text-transparent">
                                 Systèmes & Réseaux Cloud
                             </span>
                         </h1>
                         <p className="max-w-xl text-sm text-zinc-300 sm:text-base">
-                            {hero.title}, j'aimerais profiter de ma double casquette afin de participer à des projets me faisant gagner en compétences.
+                            {hero.title}, j'aimerais profiter de ma double
+                            casquette afin de participer à des projets me
+                            faisant gagner en compétences.
                         </p>
                     </div>
 
@@ -57,7 +59,8 @@ export default function HeroSection({ hero }) {
                         </a>
 
                         <p className="text-xs text-zinc-400 sm:text-sm">
-                            Regardez ma fiche et mes compétences pour voir si je peux faire partie de votre équipe.
+                            Regardez ma fiche et mes compétences pour voir si je
+                            peux faire partie de votre équipe.
                         </p>
                     </div>
                 </div>
@@ -68,7 +71,11 @@ export default function HeroSection({ hero }) {
                     <motion.div
                         className="relative flex h-52 w-52 items-center justify-center rounded-full border border-amber-500/50 bg-gradient-to-b from-zinc-900/80 to-black/90 shadow-[0_0_50px_rgba(234,179,8,0.8)]"
                         animate={{ rotate: [0, 6, -4, 0] }}
-                        transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+                        transition={{
+                            duration: 16,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }}
                     >
                         <div className="flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border border-dashed border-amber-400/60 bg-gradient-to-b from-zinc-950 to-black">
                             <img
@@ -90,4 +97,3 @@ HeroSection.propTypes = {
         ctaLabel: PropTypes.string.isRequired,
     }).isRequired,
 };
-

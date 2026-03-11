@@ -174,7 +174,7 @@ export default function CharacterSheet({ character, experiences, educations }) {
                                     </span>
                                     <div>
                                         <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
-                                            {edu.year} • {edu.level}
+                                            {edu.year}
                                         </p>
                                         <p className="text-sm text-amber-100">{edu.title}</p>
                                     </div>
