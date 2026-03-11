@@ -10,7 +10,7 @@ class PortfolioController extends Controller
     public function __invoke(): Response
     {
         $hero = [
-            'title' => 'Apprentie Administrateur Systèmes et Réseaux cloud',
+            'title' => 'Apprenti Administrateur Systèmes et Réseaux cloud',
             'ctaLabel' => 'Explorer mes Informations',
         ];
 
@@ -127,7 +127,7 @@ class PortfolioController extends Controller
                 'id' => 1,
                 'title' => 'Projet Grimoire des MJ - Beta',
                 'image' => '/images/GrimoireBeta.png',
-                'description' => 'Conception et développement d’un site pour la création de partie de JDR. Le site comprend une création de compte (ou connexion via discord OAuth2), gestions de comptes, paramètres d’affichages des parties. Le site est lié à un discord et un bot discord qui publiera annonces/commentaires/problèmes dans des salons spécifiques par rapport aux créations sur le site.',
+                'description' => 'Conception et développement d’un site pour la création de parties de JDR. Le site comprend une création de compte (ou connexion via discord OAuth2), gestions de comptes, paramètres d’affichages des parties. Le site est lié à un discord et un bot discord qui publiera annonces/commentaires/problèmes dans des salons spécifiques par rapport aux créations sur le site.',
                 'loots' => ['ReactJS', 'Laravel', 'MySQL', 'Supabase', 'GitHub', 'TypeScript', 'Vercel', 'Render'],
             ],
             [

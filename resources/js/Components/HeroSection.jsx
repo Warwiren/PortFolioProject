@@ -59,8 +59,8 @@ export default function HeroSection({ hero }) {
                         </a>
 
                         <p className="text-xs text-zinc-400 sm:text-sm">
-                            Regardez ma fiche et mes compétences pour voir si je
-                            peux faire partie de votre équipe.
+                            Regardez ma fiche et mes compétences pour voir
+                            comment je pourrais intégrer votre équipe.
                         </p>
                     </div>
                 </div>

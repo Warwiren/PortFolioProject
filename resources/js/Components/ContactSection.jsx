@@ -1,27 +1,26 @@
-import { motion } from 'framer-motion';
-import { Mail, MapPin, Gamepad2 } from 'lucide-react';
-import { useForm } from '@inertiajs/react';
+import { motion } from "framer-motion";
+import { Mail, MapPin, Gamepad2 } from "lucide-react";
+import { useForm } from "@inertiajs/react";
 
 const sectionVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: "easeOut" },
     },
 };
 
 export default function ContactSection() {
-
     const { data, setData, post, processing, errors, reset } = useForm({
-        name: '',
-        email: '',
-        message: '',
+        name: "",
+        email: "",
+        message: "",
     });
-    
+
     const submit = () => {
         e.preventDefault();
-        post(route('contact.send'), {
+        post(route("contact.send"), {
             onSuccess: () => {
                 reset();
                 alert("Le sort a été lancé avec succès !");
@@ -56,7 +55,7 @@ export default function ContactSection() {
                                 href="mailto:killian.wautersprogmail.com"
                                 className="underline decoration-amber-500/60 decoration-dotted underline-offset-4 hover:text-amber-200"
                             >
-                                killian.wautersprogmail.com
+                                killian.wauterspro@gmail.com
                             </a>
                         </p>
                         <p className="flex items-center gap-3">
@@ -65,7 +64,11 @@ export default function ContactSection() {
                         </p>
                         <p className="flex items-center gap-3 text-xs text-zinc-400">
                             <MapPin className="h-4 w-4 text-amber-300" />
-                            <span>Je recherche principalement en Normandie, mais également Lille ou autre, devoir déménager n'est pas un problème.</span>
+                            <span>
+                                Je recherche principalement en Normandie, mais
+                                également Lille ou autre, devoir déménager n'est
+                                pas un problème.
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -151,4 +154,3 @@ export default function ContactSection() {
         </section>
     );
 }
-

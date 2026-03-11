@@ -38,7 +38,7 @@ export default function ProjectsSection({ projects }) {
                         Le cube des quêtes accomplies
                     </h2>
                     <p className="max-w-md text-sm text-zinc-300">
-                        Cet artéfact contiendra tout mes projets accomplies.
+                        Cet artéfact contiendra tous mes projets accomplis.
                         N'hésite pas à cliquer sur une face pour découvrir plus
                         de détails.
                     </p>
